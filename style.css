@@ -483,7 +483,6 @@ ul { list-style: none; }
   border-radius: var(--radius-lg);
   padding: 32px;
   transition: all var(--transition);
-  overflow: hidden;
 }
 .project-card::before {
   content: '';
@@ -550,9 +549,10 @@ ul { list-style: none; }
   margin-bottom: 10px;
 }
 .card-desc { font-size: 0.9rem; color: var(--text-dim); line-height: 1.65; margin-bottom: 28px; }
-.card-btns { display: flex; gap: 10px; }
+.card-btns { display: flex; gap: 10px; position: relative; z-index: 3; }
 
 .btn-card {
+  display: inline-block;
   font-size: 0.78rem;
   font-weight: 600;
   font-family: var(--font-mono);
@@ -563,6 +563,10 @@ ul { list-style: none; }
   transition: all var(--transition);
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  pointer-events: all;
 }
 .btn-card-primary {
   background: linear-gradient(135deg, var(--blue) 0%, #1d4ed8 100%);
