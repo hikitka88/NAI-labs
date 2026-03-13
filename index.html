@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAI Labs — Independent AI Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== CANVAS BACKGROUND ========== -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">[</span>NAI<span class="logo-accent">Labs</span><span class="logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosystem</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#directions" class="nav-link" data-i18n="nav.directions">Directions</a></li>
+        <li><a href="#cta" class="nav-cta-btn" data-i18n="nav.cta">Join Telegram</a></li>
+      </ul>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="ru">RU</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge" data-reveal>
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">AI / Telegram / Automation / Games</span>
+      </div>
+
+      <h1 class="hero-title" data-reveal>
+        <span class="title-line">NAI</span>
+        <span class="title-line title-accent">Labs</span>
+      </h1>
+
+      <p class="hero-sub" data-reveal data-i18n="hero.subtitle">
+        Building AI tools, Telegram bots, mini apps, automation systems and experimental digital products.
+      </p>
+      <p class="hero-small" data-reveal data-i18n="hero.small">
+        Independent developer studio creating scalable AI-powered products for Telegram and beyond.
+      </p>
+
+      <div class="hero-btns" data-reveal>
+        <a href="#projects" class="btn btn-primary">
+          <span data-i18n="hero.btn1">Explore Projects</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.95 5.55l-1.34 6.31c-.1.45-.36.56-.72.35l-2-1.47-1.97 1.9c-.1.11-.2.14-.4.14l-.14-2.01 3.7-3.35c.16-.14-.04-.22-.25-.08L3.56 11.11 1.58 10.5c-.44-.14-.45-.44.1-.65l7.75-2.99c.36-.13.68.09.52.69z"/></svg>
+          <span data-i18n="hero.btn2">Join Telegram</span>
+        </a>
+      </div>
+
+      <div class="hero-stats" data-reveal>
+        <div class="stat">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label" data-i18n="stats.projects">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label" data-i18n="stats.ai">AI Powered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">TG</span>
+          <span class="stat-label" data-i18n="stats.tg">Telegram First</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label" data-i18n="stats.exp">Experimental</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span data-i18n="hero.scroll">scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <p class="section-label">// <span data-i18n="projects.label">PORTFOLIO</span></p>
+        <h2 class="section-title" data-i18n="projects.title">Active Projects</h2>
+        <p class="section-desc" data-i18n="projects.desc">Real products. Real experiments. Built and deployed independently.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14 4L24 9.5V18.5L14 24L4 18.5V9.5L14 4Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 4V24M4 9.5L24 18.5M24 9.5L4 18.5" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag" data-i18n="tag.game">Game</span>
+              <span class="tag">Telegram</span>
+              <span class="tag" data-i18n="tag.economy">Economy</span>
+            </div>
+          </div>
+          <h3 class="card-title">NAI Game</h3>
+          <p class="card-desc" data-i18n="p1.desc">Telegram mini app / web game with idle economy, upgrades, rewards and progression.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="10" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="14" cy="10" r="2" fill="currentColor" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Bot</span>
+              <span class="tag" data-i18n="tag.voice">Voice</span>
+            </div>
+          </div>
+          <h3 class="card-title">AI Companion</h3>
+          <p class="card-desc" data-i18n="p2.desc">Conversational AI assistant bot with memory, roles, personality and voice support.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <rect x="4" y="6" width="20" height="3" rx="1.5" fill="currentColor" opacity="0.6"/>
+                <rect x="4" y="12" width="14" height="3" rx="1.5" fill="currentColor" opacity="0.4"/>
+                <rect x="4" y="18" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.2"/>
+                <circle cx="22" cy="7" r="3" fill="#00f5ff" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag" data-i18n="tag.news">News</span>
+              <span class="tag" data-i18n="tag.summary">Summary</span>
+              <span class="tag">AI</span>
+            </div>
+          </div>
+          <h3 class="card-title">News AI</h3>
+          <p class="card-desc" data-i18n="p3.desc">Telegram bot that summarizes news channels into short readable updates with style and personality.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M4 8h20M4 8v12a2 2 0 002 2h16a2 2 0 002-2V8M4 8l10-4 10 4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M11 16l2 2 4-4" stroke="#00f5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag" data-i18n="tag.content">Content</span>
+              <span class="tag">AI</span>
+              <span class="tag" data-i18n="tag.engagement">Engagement</span>
+            </div>
+          </div>
+          <h3 class="card-title">Comment AI</h3>
+          <p class="card-desc" data-i18n="p4.desc">AI tool for generating comments, replies and discussion starters for posts and channels.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14 4c-2 4-6 6-6 10a6 6 0 0012 0c0-4-4-6-6-10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M10 18c0 0 1 3 4 3s4-3 4-3" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag">AI</span>
+              <span class="tag" data-i18n="tag.support">Support</span>
+              <span class="tag" data-i18n="tag.voice">Voice</span>
+            </div>
+          </div>
+          <h3 class="card-title">Psychology AI</h3>
+          <p class="card-desc" data-i18n="p5.desc">Supportive AI chat assistant focused on reflection, emotional support and practical guidance.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <rect x="4" y="4" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="16" y="4" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="4" y="16" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="16" y="16" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 8h4M8 12v4M20 12v4M12 20h4" stroke="#00f5ff" stroke-width="1" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag" data-i18n="tag.automation">Automation</span>
+              <span class="tag">AI</span>
+              <span class="tag" data-i18n="tag.systems">Systems</span>
+            </div>
+          </div>
+          <h3 class="card-title" data-i18n="p6.title">Automation Systems</h3>
+          <p class="card-desc" data-i18n="p6.desc">Custom Telegram and AI automation flows for growth, content, task management and experiments.</p>
+          <div class="card-btns">
+            <a href="#" class="btn-card btn-card-primary" data-i18n="card.launch">Launch</a>
+            <a href="#" class="btn-card btn-card-ghost" data-i18n="card.more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ECOSYSTEM ========== -->
+  <section class="section ecosystem" id="ecosystem">
+    <div class="container">
+      <div class="eco-inner">
+        <div class="eco-text" data-reveal>
+          <p class="section-label">// <span data-i18n="eco.label">ECOSYSTEM</span></p>
+          <h2 class="section-title" data-i18n="eco.title">One ecosystem.<br>Multiple experiments.</h2>
+          <p class="eco-body" data-i18n="eco.body">NAI Labs is a flexible product hub where AI, Telegram, automation and experimental digital ideas are turned into real working tools. Every product is built fast, tested in real conditions, and designed for growth.</p>
+        </div>
+
+        <div class="eco-features">
+          <div class="eco-feature" data-reveal>
+            <div class="eco-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 data-i18n="eco.f1.title">AI Powered</h4>
+              <p data-i18n="eco.f1.desc">Every product is built on modern AI infrastructure — language models, voice synthesis, automation agents.</p>
+            </div>
+          </div>
+          <div class="eco-feature" data-reveal>
+            <div class="eco-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21.7 8.037a4.26 4.26 0 00-.789-1.349 3.926 3.926 0 00-1.167-.887C19.005 5.6 18.015 5.5 12 5.5s-7.005.1-7.745.301a3.925 3.925 0 00-1.167.887 4.261 4.261 0 00-.789 1.349C2.001 9.065 2 10.508 2 12s.001 2.934.299 3.963a4.26 4.26 0 00.789 1.349c.316.347.704.641 1.167.887C5.009 18.4 5.985 18.5 12 18.5s6.99-.1 7.744-.301a3.926 3.926 0 001.167-.887 4.26 4.26 0 00.789-1.349C22 15.08 22 13.556 22 12s0-2.935-.3-3.963z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9.75 8.25l5.5 3.75-5.5 3.75V8.25z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h4 data-i18n="eco.f2.title">Telegram Native</h4>
+              <p data-i18n="eco.f2.desc">Designed for Telegram's ecosystem — bots, mini apps, channels, and inline tools that live where users already are.</p>
+            </div>
+          </div>
+          <div class="eco-feature" data-reveal>
+            <div class="eco-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 data-i18n="eco.f3.title">Fast Prototyping</h4>
+              <p data-i18n="eco.f3.desc">Ideas move from concept to live product in days. Ship first, refine with real feedback, iterate continuously.</p>
+            </div>
+          </div>
+          <div class="eco-feature" data-reveal>
+            <div class="eco-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2 20h20M6 20V10M10 20V4M14 20V8M18 20V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 data-i18n="eco.f4.title">Built to Scale</h4>
+              <p data-i18n="eco.f4.desc">Architecture that grows. Products are built with scalability in mind from day one — not bolted on later.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-card glass-card" data-reveal>
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-circle">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 8C14.477 8 10 12.477 10 18s4.477 10 10 10 10-4.477 10-10S25.523 8 20 8z" stroke="#00f5ff" stroke-width="1.5"/>
+                <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#00f5ff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="about-content">
+            <p class="section-label">// <span data-i18n="about.label">BUILDER</span></p>
+            <h2 class="section-title" data-i18n="about.title">Built independently</h2>
+            <p class="about-text" data-i18n="about.body">NAI Labs is developed by an independent creator focused on building practical AI products, Telegram bots, game mechanics, voice systems and automation tools. The goal is simple: launch fast, test real demand, and create products that people actually use.</p>
+            <ul class="about-list">
+              <li><span class="list-dot"></span><span data-i18n="about.li1">AI Bots</span></li>
+              <li><span class="list-dot"></span><span data-i18n="about.li2">Telegram Systems</span></li>
+              <li><span class="list-dot"></span><span data-i18n="about.li3">Voice Features</span></li>
+              <li><span class="list-dot"></span><span data-i18n="about.li4">Experimental Games</span></li>
+              <li><span class="list-dot"></span><span data-i18n="about.li5">Automation Tools</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIRECTIONS ========== -->
+  <section class="section directions" id="directions">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <p class="section-label">// <span data-i18n="dir.label">FOCUS</span></p>
+        <h2 class="section-title" data-i18n="dir.title">Core directions</h2>
+      </div>
+      <div class="directions-grid">
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M21.7 8.037a4.26 4.26 0 00-.789-1.349 3.926 3.926 0 00-1.167-.887C18.99 5.6 18 5.5 12 5.5s-6.99.1-7.744.301a3.925 3.925 0 00-1.167.887 4.261 4.261 0 00-.789 1.349C2 9.065 2 10.508 2 12s0 2.934.3 3.963a4.26 4.26 0 00.789 1.349c.316.347.704.641 1.167.887C5.009 18.4 5.999 18.5 12 18.5s6.99-.1 7.744-.301a3.926 3.926 0 001.167-.887 4.26 4.26 0 00.789-1.349C22 15.08 22 13.556 22 12s0-2.935-.3-3.963z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="9" cy="12" r="1.5" fill="currentColor"/>
+              <circle cx="15" cy="12" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d1.title">Telegram Bots</h4>
+          <p data-i18n="dir.d1.desc">Automated bots that handle conversations, commands, and workflows inside Telegram.</p>
+        </div>
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.929 4.929l1.414 1.414M17.657 17.657l1.414 1.414M4.929 19.071l1.414-1.414M17.657 6.343l1.414-1.414" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d2.title">AI Assistants</h4>
+          <p data-i18n="dir.d2.desc">Intelligent agents with memory, personality, and reasoning designed for real-world tasks.</p>
+        </div>
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 9h6M9 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="17" cy="15" r="1" fill="#00f5ff"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d3.title">Mini Apps</h4>
+          <p data-i18n="dir.d3.desc">Web apps embedded inside Telegram for seamless, native-feeling user experiences.</p>
+        </div>
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l2.5 5 5.5.8-4 3.9.95 5.5L12 15.7l-4.95 2.5.95-5.5L4 8.8l5.5-.8L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d4.title">Experimental Games</h4>
+          <p data-i18n="dir.d4.desc">Idle mechanics, economy systems, and game loops built for Telegram and web platforms.</p>
+        </div>
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d5.title">Content Automation</h4>
+          <p data-i18n="dir.d5.desc">Systems that generate, schedule and distribute content across Telegram channels at scale.</p>
+        </div>
+        <div class="direction-card" data-reveal>
+          <div class="dir-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2a3 3 0 013 3v7a3 3 0 01-6 0V5a3 3 0 013-3z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M19 10v1a7 7 0 01-14 0v-1M12 19v3M8 22h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 data-i18n="dir.d6.title">Voice Interfaces</h4>
+          <p data-i18n="dir.d6.desc">Voice-enabled AI products with synthesis, recognition and conversational flow built in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="section cta-section" id="cta">
+    <div class="container">
+      <div class="cta-inner glass-card" data-reveal>
+        <div class="cta-glow-ring"></div>
+        <p class="section-label">// <span data-i18n="cta.label">COMMUNITY</span></p>
+        <h2 class="cta-title" data-i18n="cta.title">Follow the ecosystem</h2>
+        <p class="cta-text" data-i18n="cta.body">Join Telegram to get updates, launches, experiments and early access to new NAI products.</p>
+        <a href="#" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.820 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          <span data-i18n="cta.btn">Join Telegram</span>
+        </a>
+        <div class="cta-hint" data-i18n="cta.hint">Free. No spam. Just launches and experiments.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-bracket">[</span>NAI<span class="logo-accent">Labs</span><span class="logo-bracket">]</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Independent AI studio for Telegram and experimental products.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.820 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a href="#" class="footer-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:contact@nailabs.dev" class="footer-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NAI Labs. <span data-i18n="footer.copy">Independent AI Studio.</span></p>
+        <p class="footer-mono" data-i18n="footer.mono">// building the future, one experiment at a time</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
