@@ -445,7 +445,7 @@ function initLangSwitcher() {
   style.textContent = `@keyframes rippleAnim { to { transform: translate(-50%,-50%) scale(60); opacity: 0; } }`;
   document.head.appendChild(style);
 
-  document.querySelectorAll('.btn, .btn-card-primary').forEach(btn => {
+  document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
       const rect   = this.getBoundingClientRect();
       const ripple = document.createElement('span');
